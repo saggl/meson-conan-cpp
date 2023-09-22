@@ -6,7 +6,7 @@ class videoConan(ConanFile):
     version = "0.1"
     settings = "os", "compiler", "build_type", "arch"
     generators = "pkg_config"
-    requires = "ffmpeg/4.0@bincrafters/stable"
+    requires = "ffmpeg/6.0"
     exports_sources = "src/*"
 
     def build(self):
