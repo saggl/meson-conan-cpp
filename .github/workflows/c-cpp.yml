@@ -16,4 +16,4 @@ jobs:
     - name: install conan
       run: pip install conan && conan profile detect --force
     - name: conan install & build
-      run: mkdir build && cd build && conan install .. && conan build ..
+      run: mkdir build && cd build && conan install -c tools.system.package_manager:mode=install .. && conan build ..
