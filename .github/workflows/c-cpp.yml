@@ -13,5 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: install conan
+      run: pip install conan
     - name: conan install & build
       run: mkdir build && cd build && conan install .. && conan build ..
