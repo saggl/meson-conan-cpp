@@ -1,4 +1,4 @@
-from conans import ConanFile, Meson
+from conan import ConanFile, Meson
 
 class videoConan(ConanFile):
     name = "timer"
