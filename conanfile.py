@@ -1,4 +1,5 @@
-from conan import ConanFile, Meson
+from conan import ConanFile
+from conan.tools.meson import Meson
 
 class videoConan(ConanFile):
     name = "timer"
@@ -10,6 +11,5 @@ class videoConan(ConanFile):
 
     def build(self):
         meson = Meson(self)
-        meson.configure(source_folder="%s/src" % self.source_folder,
-                        build_folder="%s/dist" % self.source_folder)
+        meson.configure()
         meson.build()
