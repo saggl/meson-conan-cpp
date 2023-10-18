@@ -17,3 +17,11 @@ jobs:
       run: pip install conan && conan profile detect --force
     - name: conan install & build
       run: mkdir build && cd build && conan install -c tools.system.package_manager:mode=install .. && conan build ..
+  abc:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: install conan
+      run: pip install conan && conan profile detect --force
+    - name: conan install & build
+    
